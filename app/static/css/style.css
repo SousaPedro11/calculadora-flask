@@ -1,0 +1,99 @@
+.box {
+  font-family: 'Orbitron', sans-serif;
+  width: 285px;
+  height: 360px;
+  margin: 15% auto auto;
+  border: 1px solid grey;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0, inset -1px -6px 12px 0.1px;
+  background-color: silver;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.screen {
+  height: 60px;
+  width: 240px;
+  border: 1px solid grey;
+  background: rgba(148, 255, 193, 0.507);
+  margin: 25px 20px 5px 20px;
+  border-radius: 6px;
+}
+
+.main-screen {
+  width: 240px;
+  height: 22px;
+  padding: 10px 5px;
+  font-size: 20px;
+  text-align: right;
+}
+
+.sub-screen {
+  max-width: 280px;
+  height: 15px;
+  padding: 10px 5px;
+  font-size: 12px;
+  text-align: right;
+}
+
+.buttons {
+  margin: 10px auto;
+}
+
+button {
+  margin: 5px;
+  padding: 3px 10px;
+  width: 50px;
+  height: 30px;
+  border: none;
+  box-shadow: 1px 2px #666;
+  /* line-height: 0; */
+}
+
+button:focus {
+  outline: none !important;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translateY(4px);
+}
+
+.btn-zero {
+  width: 113px;
+  margin-right: 7px;
+}
+
+.btn-equal {
+  position: absolute;
+  margin-left: 10px;
+  height: 80px;
+}
+
+footer {
+  padding-top: 20px;
+  font-size: 10px;
+}
+
+@media (max-width: 425px) {
+  .github {
+    display: none;
+  }
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+#deleteButton{
+  background-color: rgb(235, 159, 18);
+}
+
+#clearButton{
+  background-color: rgb(223, 66, 45);
+}
+#resultButton{
+  background-color: rgb(54, 211, 211);
+}
