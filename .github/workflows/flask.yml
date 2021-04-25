@@ -1,0 +1,38 @@
+name: Flask CI
+
+on:
+  push:
+  pull_request:
+    types:
+      - ready_for_review
+      - review_requested
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [ 3.9 ]
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+
+      - name: Install Dependencies
+        uses: BSFishy/pip-action@v1
+        with:
+          requirements: requirements.txt
+
+      - name: 'Run PEP8'
+        uses: quentinguidee/pep8-action@v1
+        with:
+          arguments: '--exclude=./afv_portal/migrations/* --max-line-length=120'
+
+      - name: Test
+        run: |
+          pytest -vvv
