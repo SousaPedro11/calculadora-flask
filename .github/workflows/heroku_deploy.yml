@@ -3,7 +3,7 @@ name: Heroku Deploy
 on:
   workflow_run:
     workflows: ['Flask CI']
-    branches: [main]
+    branches: [master]
     types: [completed]
 
 jobs:
