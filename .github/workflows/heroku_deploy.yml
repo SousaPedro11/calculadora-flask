@@ -25,7 +25,7 @@ jobs:
           # The appname to use for deploying/updating
           heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
           # The branch that you would like to deploy to Heroku
-          branch: main # optional, default is HEAD
+          branch: master # optional, default is HEAD
           # Set this to true if want to use --force
           useforce: false # optional
           # Contents of the Procfile to save and deploy
